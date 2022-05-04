@@ -10,6 +10,9 @@ interface LayoutProps {
 
 const Input = styled(TextField)({
   marginBottom: "0",
+  "& p":{
+    fontFamily: `"Vazir","Roboto","Helvetica","Arial",sans-serif`,
+  },
   "& label": {
     left: "unset",
     fontSize: "18px",
