@@ -6,20 +6,20 @@ export interface LayoutProps {
   size: string;
 }
 
-const BtnContainer = styled("div")<LayoutProps>(({ size }) => ({
-  color: "#1f184a !important",
+const BtnContainer = styled("div")<LayoutProps>(({ size, theme }) => ({
+  color: `${theme.palette.primary.main} !important`,
   position: "relative",
   display: "inline-block",
   fontSize: size === "small" ? "medium" : "large",
   padding: "0",
   transition: "all 0.3s ease",
   "a,button": {
-    color: "#1f184a ",
+    color: theme.palette.secondary.main,
   },
   button: {
     cursor: "pointer",
     background: "unset",
-    fontFamily:"vazir",
+    fontFamily: "vazir",
     border: "none",
     width: "100%",
     height: "100%",
@@ -34,12 +34,12 @@ const BtnContainer = styled("div")<LayoutProps>(({ size }) => ({
     height: "2px",
 
     transition: "all 0.3s ease-in-out",
-    backgroundColor: "#1d5aff",
+    backgroundColor: theme.palette.primary.main,
     transform: "scale(0)",
   },
   "&:hover a , &:hover button": {
-    backgroundColor: "#fff",
-    color: "#1d5aff",
+    backgroundColor: theme.palette.primary.contrastText,
+    color: theme.palette.primary.main,
     boxShadow: "unset",
   },
   "&:hover:before": {

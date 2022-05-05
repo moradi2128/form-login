@@ -3,29 +3,24 @@ import React from "react";
 import { useForm, useFormState } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import {
-  styled,
-  FormControlLabel,
-  Checkbox,
-  Button,
-} from "@mui/material";
+import { styled, FormControlLabel, Checkbox, Button } from "@mui/material";
 // === Components ===
 import InputItem from "../InputItem/InputItem";
 
-const BtnSubmit = styled(Button)({
+const BtnSubmit = styled(Button)(({ theme }) => ({
   display: "block",
   width: "100%",
   margin: "3rem 0",
   padding: "5px 0",
   fontSize: "large",
   borderRadius: "10px",
-  background: "linear-gradient(90deg, #8f48ff, #1d5aff)",
+  background: `linear-gradient(90deg, #8f48ff, ${theme.palette.primary.main})`,
   boxShadow: " 0 3px 6px 0 rgb(0 0 0 / 16%)",
   transition: "unset",
   "&:hover": {
-    background: "#1565c0",
+    background: theme.palette.primary.main,
   },
-});
+}));
 
 interface IFormInput {
   email: string;
@@ -47,7 +42,7 @@ const schema = yup
   .required();
 
 const Form = () => {
-  // === React hook Form === 
+  // === React hook Form ===
   const { handleSubmit, control } = useForm<IFormInput>({
     resolver: yupResolver(schema),
   });
@@ -77,7 +72,6 @@ const Form = () => {
           marginTop: "0",
           "& span": {
             paddingRight: "0",
-            fontFamily: `"Vazir","Roboto","Helvetica","Arial",sans-serif`,
           },
         }}
         label="مرا به خاطر بسپار"

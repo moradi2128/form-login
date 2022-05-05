@@ -5,22 +5,22 @@ export interface LayoutProps {
   children: React.ReactNode;
 }
 
-const BtnContainer = styled(Button)({
-  backgroundColor: "#1d5aff",
-  color: "#fff",
+const BtnContainer = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
   fontSize: "18px",
   borderRadius: "45px",
   padding: "4px 25px",
-  border: "1px solid #1d5aff",
+  border: `1px solid ${theme.palette.primary.main}`,
   "&:hover": {
-    backgroundColor: "#fff",
-    color: "#1f184a",
-    boxShadow: "0 0 4px 1px #1d5aff",
+    backgroundColor: theme.palette.primary.contrastText,
+    color: theme.palette.primary.main,
+    boxShadow: `0 0 4px 1px ${theme.palette.primary.main}`,
   },
-  "@media screen and (max-width:900px)":{
+  "@media screen and (max-width:900px)": {
     fontSize: "16px",
-  }
-});
+  },
+}));
 const Btn = ({ children }: LayoutProps) => {
   return <BtnContainer variant="contained">{children}</BtnContainer>;
 };
