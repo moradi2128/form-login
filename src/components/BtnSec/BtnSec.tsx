@@ -15,11 +15,11 @@ const BtnContainer = styled("div")<LayoutProps>(({ size }) => ({
   transition: "all 0.3s ease",
   "a,button": {
     color: "#1f184a ",
-    fontFamily: `"Vazir","Roboto","Helvetica","Arial",sans-serif`,
   },
   button: {
     cursor: "pointer",
     background: "unset",
+    fontFamily:"vazir",
     border: "none",
     width: "100%",
     height: "100%",

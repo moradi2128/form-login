@@ -21,7 +21,6 @@ const BtnSubmit = styled(Button)({
   borderRadius: "10px",
   background: "linear-gradient(90deg, #8f48ff, #1d5aff)",
   boxShadow: " 0 3px 6px 0 rgb(0 0 0 / 16%)",
-  fontFamily: `"Vazir","Roboto","Helvetica","Arial",sans-serif`,
   transition: "unset",
   "&:hover": {
     background: "#1565c0",

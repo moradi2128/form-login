@@ -47,6 +47,6 @@ export const BoxLeft = styled(Box)({
     background: "#000000",
     opacity: "0.2",
     position: "absolute",
-    right: "42%",
+    right: "57%",
   },
 });

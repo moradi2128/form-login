@@ -10,14 +10,9 @@ interface LayoutProps {
 
 const Input = styled(TextField)({
   marginBottom: "0",
-  "& p":{
-    fontFamily: `"Vazir","Roboto","Helvetica","Arial",sans-serif`,
-  },
+  
   "& label": {
-    left: "unset",
     fontSize: "18px",
-    right: "0",
-    fontFamily: `"Vazir","Roboto","Helvetica","Arial",sans-serif`,
   },
   "& .MuiInput-underline:before": {
     borderBottom: "1px solid #6c6c76 !important",

@@ -6,7 +6,7 @@ Form Login made with ReactJs , TypeStript.
 Packages used:
 1. Material-UI5
 2. React hook form
-3.react-router-dom
+3. react-router-dom
 
 
 Front-end project only, no backend storage or database.

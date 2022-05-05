@@ -12,8 +12,6 @@ const BtnContainer = styled(Button)({
   borderRadius: "45px",
   padding: "4px 25px",
   border: "1px solid #1d5aff",
-  fontFamily: `"Vazir","Roboto","Helvetica","Arial",sans-serif`,
-
   "&:hover": {
     backgroundColor: "#fff",
     color: "#1f184a",

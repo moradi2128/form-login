@@ -10,7 +10,6 @@ import BtnSec from "../../components/BtnSec/BtnSec";
 const Login = () => {
   // === Media Query max-width:600px ===
   const theme = useTheme();
-  console.log(theme);
   const isMatchSm = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <main>
